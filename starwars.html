@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <script src="starwars.js" defer></script>
+    <link rel="stylesheet" href="starwars.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/starwars-logo.png">
+    <title>Star Wars</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-items">
+            <h3>
+                "Planets"
+                <div>
+                    <button id="planets-previous" type="button"> Previous </button>
+                    <button id="planets-next" type="button"> Next </button>
+                </div>
+            </h3>
+        </div>
+
+        <div class="nav-items">
+            <h3>
+                "Starships"
+                <div>
+                    <button id="starships-previous" type="button"> Previous </button>
+                    <button id="starships-next" type="button"> Next </button>
+                </div>
+            </h3>
+        </div>
+
+        <div class="nav-items">
+            <h3>
+                "People"
+                <div>
+                    <button id="people-previous" type="button"> Previous </button>
+                    <button id="people-next" type="button"> Next </button>
+                </div>
+            </h3>
+        </div>
+    </nav>
+
+    <main>
+        <div class ="txt">
+            <h1 class ="main-title"> STAR WARS</h1>
+        </div>
+        <div id="ctn-main" class="ctn"></div>
+    </main>
+    <div class ="overlay">
+        <div class ="loading"> Loading... </div>
+    </div>
+
+</body>
+
+</html>
