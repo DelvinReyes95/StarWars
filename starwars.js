@@ -11,19 +11,19 @@ const peopleNext = document.getElementById("people-next")
 
 // Variables Planets
 let url_fetch = "https://swapi.dev/api/planets/?page=1";
-let nextPlanets;
-let previousPlanets;
+let nextFetch;
+let previousFetch;
 
-planetsPrevious.addEventListener("click", () => pageNavigation(previousPlanets, 'planets'));
-planetsNext.addEventListener("click", () => pageNavigation(nextPlanets, 'planets'));
+planetsPrevious.addEventListener("click", () => pageNavigation(previousFetch, 'planets'));
+planetsNext.addEventListener("click", () => pageNavigation(nextFetch, 'planets'));
 
 // Functions Planets
 async function fetchPlanets() {
     document.querySelector('.overlay').classList.add('active');
     let results = await fetch(url_fetch);
     const data = await results.json();
-    nextPlanets = data.next;
-    previousPlanets = data.previous;
+    nextFetch = data.next;
+    previousFetch = data.previous;
     let planets = data.results;
     let outPut = ' ';
     document.querySelector('.overlay').classList.remove('active');
@@ -43,11 +43,12 @@ fetchPlanets();
 
 //Function for the click "next" and "previous" button
 function pageNavigation(url, searchType) {
-    if (url) {
-        url_fetch = new URL(url);
-    }
+
 
     if (searchType === 'planets') {
+        if (url) {
+            url_fetch = new URL(url);
+        }
         fetchPlanets()
             .then(response => {
                 console.log(`Success: Planets`);
@@ -57,6 +58,9 @@ function pageNavigation(url, searchType) {
                 console.error(error)
             });
     } else if (searchType === 'starships') {
+        if (url) {
+            url_starships = new URL(url);
+        }
         fetchStarships()
             .then(response => {
                 console.log(`Success: Starships`);
@@ -67,6 +71,9 @@ function pageNavigation(url, searchType) {
             });
     } else {
         if (searchType === 'people') {
+            if (url) {
+                url_people = new URL(url);
+            }
             fetchPeople()
                 .then(response => {
                     console.log(`Success: People!`)
