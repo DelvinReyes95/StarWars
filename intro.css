@@ -15,6 +15,7 @@ a{
     left: 20px;
 }
 
+
 body::after {
 	content: "";
 	position: fixed;
@@ -29,6 +30,56 @@ body::after {
 		rgba(0, 0, 0, 0) 100%
 	);
 	z-index: 1;
+}
+
+a {
+	color: gold;
+	top: 50px;
+    left: 60px;
+	border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+    border-radius: 10px;
+}
+
+a:before {
+	content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+
+}
+
+a:active {
+	color: #000
+}
+
+a:active:after {
+	background: transparent;
+}
+
+a:hover:before {
+	opacity: 1;
+}
+
+a:after {
+	content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
 }
 
 .stars {
