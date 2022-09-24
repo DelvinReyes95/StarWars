@@ -15,9 +15,18 @@
 </head>
 
 <body>
+    <a href="/StarWars/main-page.html"> Back to Intro</a>
     <nav>
         <div class="nav-items">
-            <a href="/StarWars/main-page.html"> Back to Intro</a>
+            
+            <style>
+                a:link {
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: none;
+                }
+            </style>
             <h3>
                 "Planets"
                 <div>
@@ -29,7 +38,7 @@
 
         <div class="nav-items">
             <h3>
-                "Starship"
+                "Starships"
                 <div>
                     <button id="starships-previous" type="button"> Previous </button>
                     <button id="starships-next" type="button"> Next </button>
@@ -51,8 +60,9 @@
     <main>
         <div class ="txt">
             <h1 class ="main-title"> STAR WARS</h1>
+            <h3 class ="main-title"> "First click next then previous button to view each category to read and learn about the Star Wars universe"</h3>
         </div>
-        <div id="mainPage" class="ctn"></div>
+        <div id="mainPage" class="main"></div>
     </main>
     <div class ="overlay">
         <div class ="loading"> Loading... </div>
