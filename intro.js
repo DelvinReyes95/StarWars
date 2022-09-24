@@ -26,6 +26,5 @@ setTimeout(()=> {
     a.href ="/StarWars/starwars.html"
     button.appendChild(a)
     a.innerText = "Click to begin"
-    
 
 },15000)
