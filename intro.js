@@ -25,8 +25,6 @@ setTimeout(()=> {
     let a = document.createElement("a")
     a.href ="/StarWars/starwars.html"
     button.appendChild(a)
-
     a.innerText = "Click to begin"
-    a.innerText = "Skip Intro"
 
 },15000)
