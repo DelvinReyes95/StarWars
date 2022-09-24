@@ -19,12 +19,12 @@ function randomPosition() {
     return [randomX, randomY]
 }
 
-//
+
 setTimeout(()=> {
     const button = document.getElementById("btn-container")
     let a = document.createElement("a")
     a.href ="/StarWars/starwars.html"
     button.appendChild(a)
-    a.innerText = "Enter"
+    a.innerText = "Skip Intro"
 
-},1)
+},15000)
